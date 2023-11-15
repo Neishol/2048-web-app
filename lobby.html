@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<title>Lobby Interface</title>
+	<meta charset="UTF-8">
+	<meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/botonprol.css">
+	<script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-app.js"></script>
+  <script src="js/ConnectionFb.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-analytics.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-auth.js"></script>
+</head>
+
+<body>
+<center>
+<h1>¡Bienvenido! <div id="user"></div></h1>
+<button onclick="cerrar()">Cerrar Sesión</button>
+	<div class="container">
+		<div class="row">
+			<div>
+                <center><h1 class="display-1">Modos</h1></center><br><br>
+                <buttonE><a href="game.html" class="button type1" role="button">
+                        Easy    
+                </a></buttonE>
+                <buttonN><a href="game.html" class="button type1" role="button">
+                        Normal    
+                </a></buttonN> 
+                <buttonH><a href="game.html" class="button type1" role="button">
+                        Hard  
+                </a></buttonH> 
+		    </div>
+		</div>
+	</div>
+	
+	<script src="js/jquery-3.3.1.slim.min.js"></script>
+	<script src="js/popper.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+	<script src="js/FbApp.js"></script>
+  <script src="js/observadorUsuarioActivo.js"></script>
+  <script>
+    const buttonE = document.querySelector('buttonE') //etiqueta butt
+    buttonE.addEventListener('click', function(e) {
+      // Adds clicked class to button
+      console.log('putita');  
+      sessionStorage.setItem("tamano", 3);
+    })
+
+    const buttonN = document.querySelector('buttonN') //etiqueta butt
+    buttonN.addEventListener('click', function(e) {
+      // Adds clicked class to button
+      console.log('putita');  
+      sessionStorage.setItem("tamano", 4);
+    })
+
+    const buttonH = document.querySelector('buttonH') //etiqueta butt
+    buttonH.addEventListener('click', function(e) {
+      // Adds clicked class to button
+      console.log('putita');  
+      sessionStorage.setItem("tamano", 5);
+    })
+  </script>
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Index</title>
+    <link rel="stylesheet" href="css/botonprol.css">
+    <link rel="stylesheet" href="css/index.css">
+    <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-app.js"></script>
+    <script src="js/ConnectionFb.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-analytics.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-auth.js"></script>
+
+<style>
+  body{
+    background: url("images/fondorancio.jpg") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+  } 
+</style>
+</head>
+
+<body id="body">
+  <div class="registro-logueo">
+    <nav id="movil"></nav>
+    <div class="form">
+      <form class="formu-registro" action="javascript:;" onsubmit="registrar()">
+        <p>Registro</p>
+        <input id="email" type="email" placeholder="Ingresa mail "/>
+        <input id="password" type="password" placeholder="password"/>
+        <button class="button type1" type="submit">Enviar</button>
+        <p class="logueo-texto">¿Ya estas registrado? <a class="logueo-animacion" href="#">Inicia Sesión</a></p>
+      </form>
+      <form class="formu-logueo" action="javascript:;" onsubmit="ingreso()"> 
+        <p>Iniciar Sesion</p>
+        <input id="email2" type="email" placeholder="Ingresa mail"/>
+        <input id="password2" type="password" placeholder="password"/>
+        <button class="button type1" type="submit">Acceder</button>
+      <div id="movil"></div>
+        <p class="logueo-texto">¿No estas registrado? <a class="logueo-animacion" href="#">Registrate!</a></p>
+      </form>
+    </div>
+  </div>
+
+  <div id="href"></div>
+
+  <div id="cacheda"></div>
+
+
+  <div id="contenido"></div>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+  <script>
+    $('.logueo-animacion').click(function()
+    {
+      $('form').animate({height: "toggle"}, "slow"); //lo que hace el toggle es switchear entre hide y show
+    });
+  </script>
+  <script src="js/FbApp.js"></script>
+  <script src="js/observador.js"></script>
+  <script type="text/javascript" src="Zebra_Dialog-master/dist/zebra_dialog.min.js"></script>
+  <link href="Zebra_Dialog-master/dist/css/flat/zebra_dialog.min.css" rel="stylesheet" type="text/css" >
+</body>
+</html>
+<!---->
